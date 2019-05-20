@@ -29,6 +29,29 @@ list-style-type: none;
 	font-size: 10pt;
 }
 
-.media{
+.media {
 	padding-bottom: 20px;
 }
+
+.news {
+	font-size: 11pt;
+}
+
+.news-button {
+	font-size: 11pt;
+	text-align: right;
+}
+
+.container {
+	padding-bottom: 20px;
+}
+
+.img-thumbnail {
+	width: 150px;
+}
+
+a:hover {
+	color: green;
+}
+
+

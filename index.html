@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
 
@@ -23,33 +24,36 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
-		        <a class="nav-link active" href="#">Главная</a>
+		        <a class="nav-link active text-success" href="#">Главная</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Автобиография</a>
+		        <a class="nav-link text-success" href="#">Автобиография</a>
 		      </li>
 		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        <a class="nav-link dropdown-toggle text-success" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          Публикации
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Научные программы</a>
-		          <a class="dropdown-item" href="#">Госпрограммы</a>
-		          <a class="dropdown-item" href="#">Картография</a>
-		          <a class="dropdown-item" href="#">Выступления</a>
-		          <a class="dropdown-item" href="#">Экспедиции</a>
-		          <a class="dropdown-item" href="#">Биоразнообразия</a>
-		          <a class="dropdown-item" href="#">Учебно-педагогические работы</a>
-		          <a class="dropdown-item" href="#">Учебно-производственно-практичские</a>
+		          <a class="dropdown-item text-success" href="#">Научные программы</a>
+		          <a class="dropdown-item text-success" href="#">Госпрограммы</a>
+		          <a class="dropdown-item text-success" href="#">Картография</a>
+		          <a class="dropdown-item text-success" href="#">Выступления</a>
+		          <a class="dropdown-item text-success" href="#">Экспедиции</a>
+		          <a class="dropdown-item text-success" href="#">Биоразнообразия</a>
+		          <a class="dropdown-item text-success" href="#">Учебно-педагогические работы</a>
+		          <a class="dropdown-item text-success" href="#">Учебно-производственно-практичские</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Видеоролики</a>
+		        <a class="nav-link text-success" href="#">Видеоролики</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link text-success" href="#">Картография</a>
 		      </li>
 		    </ul>
 
 		  	<form class="form-inline">
 				<input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+				<button class="btn btn-success my-2 my-sm-0" type="submit">Поиск</button>
 			</form>
 			<ul>
 				<li class="nav-item dropdown">
@@ -70,10 +74,10 @@
 
 	<div class="container">
 	  <div class="row">
-	    <div class="col-sm-8 col-md-8">
+	    
 
 	    <!-- Image carousel -->
-
+	    <div class="col-sm-8 col-md-8">
 	      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
@@ -106,30 +110,151 @@
 		  </div>
 	    </div>
 
+
 	    <!-- END of Image carousel-->
 
 	    <!-- News column -->
 
-	    <div class="col-sm-4 col-md-4">
-	      <ul class="list-unstyled">
-			  <li class="media">
-			    <img src="..." class="mr-3" alt="...">
-			    <div class="media-body">
-			      <h5 class="mt-0 mb-1">List-based media object</h5>
-			      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. 
-			    </div>
-			  </li>
-			  <li class="media my-4">
-			    <img src="..." class="mr-3" alt="...">
-			    <div class="media-body">
-			      <h5 class="mt-0 mb-1">List-based media object</h5>
-			      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. 
-			    </div>
-			  </li>
-			</ul>
+	    <div class="col-sm-4 col-md-4 news">
+	    	<h5 class="alert-success">Новости</h5>
+	    	<div class="card" style="width: 22rem;">
+			  <div class="card-body">
+			    <p class="card-text news">Молодые ученые повысили свои знания и навыки в использовании инновационной системы GIS.</p>
+			    <a href="#" class="btn btn-outline-success news-button">Подробнее</a>
+			  </div>
+			</div>
+			<div class="card" style="width: 22rem;">
+			  <div class="card-body">
+			    <p class="card-text news">Обучение технологиям геоинформационной системы для мониторинга снежного барса.</p>
+			    <a href="#" class="btn btn-outline-success news-button">Подробнее</a>
+			  </div>
+			</div>
 	    </div>
 
-	    <!-- End of News column -->
+	  </div>  <!--  class="container"> -->
+	</div> <!--class="row"> -->	
+	
+		<!-- End of News column -->
+	<div class="container">
+	  <div class="row">
+
+	    <div class="col-sm-12">
+
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs">
+		    <li class="nav-item">
+		      <a class="nav-link text-success" href="#home">Научные программы</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link text-success" href="#menu1">Госпрограммы</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link text-success" href="#menu2">Выступления</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link text-success" href="#menu3">Экспедиции</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link text-success active" href="#menu4">Биоразнообразия</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link text-success" href="#menu5">Учебно-педагогические работы</a>
+		    </li>
+		  </ul>
+
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    <div id="home" class="container tab-pane fade"><br>
+		      
+		    </div>
+		    <div id="menu1" class="container tab-pane fade"><br>
+		      
+		    </div>
+		    <div id="menu2" class="container tab-pane fade"><br>
+		      
+		    </div>
+		    <div id="menu3" class="container tab-pane fade"><br>
+		      
+		    </div>
+		    <div id="menu4" class="container tab-pane active"><br>
+		      
+		      	<div class="container">
+			      	<div class="row">
+			      		
+			      		<div class="col-sm-12">	
+					      <div class="card mb-3">
+							  <div class="row no-gutters">
+							    <div class="col-md-2">
+							      <img src="1pub.jpeg" class="img-thumbnail">
+							    </div>
+							    <div class="col-md-10">
+							      <div class="card-body">
+							        <a href="#"><h5 class="card-title text-success">"Снежный барс - национальная гордость Таджикистана"</h5></a>
+							        <p class="card-text">TС целью повышения уровня знаний и осведомленности широкого круга читателей о снежном барсе в рамках инициативы ПРООН-ГЭФ по сохранению снежного барса в Таджикистане подготовлен информационный продукт, который охватывает различные аспекты сохранения этого редкого хищника.</p>
+							      </div>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+
+						<div class="col-sm-12">	
+					      <div class="card mb-3">
+							  <div class="row no-gutters">
+							    <div class="col-md-2">
+							      <img src="2pub.jpeg" class="img-thumbnail">
+							    </div>
+							    <div class="col-md-10">
+							      <div class="card-body">
+							        <a href="#"><h5 class="card-title text-success">Информационный бюллетень по результатам инициативы по сохранению снежного барса в Таджикистане (апрель - июль 2018 г.)</h5></a>
+							        <p class="card-text">Подготовленный бюллетень включает в себя более развернутое описание результатов проекта за период с апреля по июль 2018 г. и предназначен для распространения в кругу проектных бенефициаров, действующих и потенциальных партнеров.</p>
+							      </div>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+
+						<div class="col-sm-12">	
+					      <div class="card mb-3">
+							  <div class="row no-gutters">
+							    <div class="col-md-2">
+							      <img src="3pub.jpeg" class="img-thumbnail">
+							    </div>
+							    <div class="col-md-10">
+							      <div class="card-body">
+							        <a href="#"><h5 class="card-title text-success">Информационный бюллетень по результатам инициативы по сохранению снежного барса в Таджикистане (январь-март 2018 г.)</h5></a>
+							        <p class="card-text">Значительные результаты были выполнены проектной командой за период с января по март 2018 г.. Бюллетень включил в себя информацию о продвижении проекта в усилении партнерства с природоохранными ведомствами в проектных районах, повышении технического потенциала и навыков в проведении мониторинга дикой природы в особо охраняемых природных территориях, сборе информационного материала для создания фильма о снежном барсе и повышении знаний о правовых рамках в проведении охоты на диких животных.</p>
+							      </div>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+
+						
+					</div>
+				</div>	 
+
+		    </div>
+		    <div id="menu5" class="container tab-pane fade"><br>
+		      
+		    </div>
+		  </div>
+		</div>
+
+		<!-- JQuery for tabs -->
+		<script>
+		$(document).ready(function(){
+		  $(".nav-tabs a").click(function(){
+		    $(this).tab('show');
+		  });
+		});
+		</script>
+		</div>
+
+	  </div>  <!--  class="container"> -->
+	</div> <!--class="row"> -->		
+
+
+	    
 
 	    <!-- Puclications column -->
 
@@ -154,12 +279,17 @@
 
 	    <!-- Footer -->
 
-	    	<!-- FOOTER HERE!!! -->
 
-	    <!-- End of Foote -->
+  <footer id="sticky-footer" class="py-4 bg-light ">
+    <div class="container text-center">
+      <small>Copyright &copy; Bonijur</small>
+    </div>
+  </footer>
 
-	  </div>
-	</div>
+
+	    <!-- End of Footer -->
+
+	
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
